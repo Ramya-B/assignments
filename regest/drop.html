@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>drop downs</title>
+</head>
+<body>
+<select class="selectpicker">
+<option>I need help with...</option>
+<optgroup label="Group 1">
+    <option value=3319  >1</option>
+    <option value=3325  >2</option>
+    <option value=3430  >3</option>
+</optgroup>
+<optgroup label="Group 2">
+    <option value=3431  >4</option>
+    <option value=3432  >5</option>
+    <option value=3433  >6</option>
+    <option value=3434  >7</option>
+</optgroup>
+<option value=3435  >8</option>
+<option value=3436  >9</option>
+<option value=3437  >10</option>
+<option value=3438  >11</option>
+<option value=3439 selected='selected' >12</option>
+<option value=3440  >13</option>
+<option value=3441  >14</option>
+</select>
+<p id="demo">hello world</p>
+<input type="text" value="hello world" onSelect="selected()" >
+<h1 id="sl" onmouseover="style.color='red'" onmouseout="style.color='black'">ramya</h1>
+<button type="button" onclick="document.getElementById('demo').innerHTML='welcome'">cleck on me</button>
+<input type="text" id="bl" onblur="blurring()">
+<input type="text"  onfocus="focussing(this)">
+<input type="radio" name="gender" value="male">male
+<input type="radio" name="gender" value="female" checked>female
+<input type="radio" name="gender" value="other" disabled>other
+<input type="checkbox" name="gender" value="male" checked>male
+<input type="checkbox" name="gender" value="female">female
+<input type="checkbox" name="gender" value="other" disabled>other
+ <script>
+ function myFunction(){
+ var x=document.getElementById('demo1').value;
+  document.getElementById('demo').innerHTML="you selected the satate"+ x;
+  };
+  function selected(){
+ // document.write("hello");
+  document.getElementById("sl").innerHTML="B RAMMYA";
+  };
+  function blurring(){
+  var x=document.getElementById('bl');
+ x.style.color="red";
+  };
+  function focussing(y){
+   y.style.background="red";
+  };
+ </script>
+ <select id="demo1" onchange="myFunction()" size="7" multiple>
+<option value="I">india</option>
+<option value="US">united states</option>
+<option value="UK">england</option>
+<option value="J">japan</option>
+<option value="I">india</option>
+<option value="US">united states</option>
+<option value="UK">england</option>
+<option value="J">japan</option>
+ <option value="I">india</option>
+<option value="US">united states</option>
+<option value="UK">england</option>
+<option value="J">japan</option>
+</select>
+<body>
+</html>

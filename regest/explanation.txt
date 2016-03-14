@@ -1,0 +1,25 @@
+ Requirements for developing topics page:
+ `1.create navigation bar
+  2.maintain heading
+  3.6 images related to topics.
+  4.When ever we are clicking on image it goes to instructions page(onclick event).
+  
+  i)Navigation bar: 
+    1.It is created by using bootstrap.It is developed by using <nav class="navbar navbar-default navbar-fixed-top"> tag.By using this class automatically it generates the 
+	  navigation bar and it is fixed at top.Take div tag with class "container".The use of this class is it align the navigation bar content to center.Inside the div tag 
+	  create another div tag with class "navbar-header".In this div use anchor tag (inside that use image tag )to link its destination(login page) when ever click on image.
+	2.To add links to the nav bar simply add the unordered list(ul) with classes nav,navbar-nav.Inside that create list elements home,topics,aboutus.now we are in topics
+	  page so it would be in active state.when ever we are clicking on home page it will goes to main.html it is done by using <a> tag.similarly aboutus also lyk that only.
+	3.One profile dropdown is created to the tight of the nav bar by using navbar-right class.By clicking on dropdown show the list of elements settings,viewprofile,logout.
+      when ever we are clicking on logout it will goes to login page by using anchor tag.But in case of settings,view profile use href="#" then there is no effect we are
+      clicking on it it will stay in taht page only.
+  ii)Heading:
+    1.Tke div tag with class "container".Inside that make a heading "Topics" by using <h2>tag.
+  iii)insert images:
+    1.By using grid system create two rows.Each row having 3 columns these become responsive by using col-md,col-xs,col-sm,col-lg.
+    2.Use card class.inside that one add image tag and text tag.
+  iv)Onclick:
+     whenever we are clicking on image it invokes onclick event.It calls the fun() method.By using window.loction.href it goes to instructiion page.
+	 
+	 iii & iv th steps are repeated for 2 times.
+	 

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>registration form</title>
+			<link rel="stylesheet" href="style1.css">
+	</head>
+    <body>
+       <div>
+          <table cellpadding="5" width="20%"  align="center" cellspacing="5">
+            <tr>
+               <td colspan="3">
+                   <center><b>Tradeleaves Registration Form</b></center>
+                </td>
+            </tr>
+           <form id="myform">
+                <tr>
+                   <td>First Name</td>
+                       <td><input type="text" name="fname" id="firstname" size="25" title="please enter first name" onfocus="focussing(this)" onblur="blurring(this)" oninput="changing(this)"><p id="demo2"></p></td>
+                </tr>
+
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lname" id="lastname" size="25" title="please enter last name" onfocus="focussing(this)" onblur="blurring(this)"  oninput="changing(this)"><p id="demo3"></p></td>
+				</tr>
+					<tr>
+						<td>Gender</td>
+						<td>
+						<input type="radio" name="gender" value="male">Male
+						<input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="others">Others
+						</td>
+					</tr>
+                     <tr>
+						<td>Email</td>
+						<td><input type="text" name="email" id="email-id" size="25" title="plz enter email id"
+						onfocus="focussing(this)" onblur="blurring(this)" oninput="changing(this)"><p id="demo4"></p></td>
+					</tr>
+                       <tr>
+						<td>Confirm Email</td>
+						<td><input type="text" name="cemail" id="confirm-email" size="25" title="confirm email" onfocus="focussing(this)" onblur="blurring(this)"><p id="demo"></p></td>
+					</tr>
+					 <tr>
+						<td>Password</td>
+						<td><input type="password" name="pwd" id="password" size="25" title="enter password" onfocus="focussing(this)" onblur="blurring(this)"  oninput="changing(this)"><p id="demo5"></p></td>
+					</tr>
+					<tr>
+						<td>Confirm Password</td>
+						<td><input type="" name="cpwd" id="confirm-password" size="25" title="confirm password"
+						onfocus="focussing(this)" onblur="blurring(this)" ><p id="demo1"></p></td>
+					</tr>
+					    <tr>
+							<td colspan=3><hr>
+					     </tr>
+						 <tr>
+					  <td>Qualifications:</td>
+				      <td>
+					         <select id="Course" onchange="dropDown1()">
+								<option value="none" selected>select..</option>
+								<option value="10" >s.s.c</option>
+								<option value="+2">Inter</option>
+								<option value="graduate">Graduate</option>
+								<option value="post-graduate">Post graduate</option>
+						   </select>
+					 </td>
+					 </tr>
+					 <tr>					 
+					 <td>
+					 <select id="group"  onchange="dropDown2()">
+							<option value="none" selected>select..</option>
+								<option value="cbsc">CBSE</option>
+								<option value="icse">ICSE</option>
+								<option value="sb">State Board</option>
+							</select>
+					 </td>
+					</tr>
+					<tr>
+					 <td>
+							<select id="graduate" onchange="dropDown3()">
+							<option value="none" selected>select..</option>
+								<option value="be">B.E/BTECH</option>
+							 <option value="bsc">BSC</option>
+							</select>
+					 </td>
+					 </tr>
+					<tr>
+					 <td>
+							<select id="branch">
+							<option value="none" selected>select..</option>
+								<option value="ece">ECE</option>
+							 <option value="csc">CSE</option>
+							 <option value="eee">EEE</option>
+							 <option value="it">IT</option>
+							 <option value="civil">CIVIL</option>
+							 <option value="mech">MECH</option>
+							</select>
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+							<select id="post-graduate">
+							<option value="none" selected>select..</option>
+								<option value="me">M.E/MTECH</option>
+								<option value="bsc">MSC</option>
+							</select>
+					 </td>
+				</tr>
+					 <tr>
+					 <td>
+							<select id="state">
+							<option value="none" selected>select..</option>
+								<option value="ap">A.P</option>
+								<option value="ts">T.S</option>
+								<option value="tn">TN</option>
+							</select>
+					 </td>
+					 </tr>
+					 <tr>
+					 <td>
+							<select id="state">
+							<option value="none" selected>select..</option>
+								<option value="ap">A.P</option>
+								<option value="ts">T.S</option>
+								<option value="tn">TN</option>
+							</select>
+					 </td>
+					 </tr>
+						<tr>
+							<td>Interests:
+							</td>
+						</tr>
+							<tr>
+								<td><input type="checkbox" name="interests" value="playing" onclick="counting()">playing</td>
+								<td><input type="checkbox" name="interests" value="cooking" onclick="counting()">cooking</td>
+								<td><input type="checkbox" name="interests" value="reading" onclick="counting()">Reading</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="interests" value="Travelling" onclick="counting()">Travelling</td>
+								<td><input type="checkbox" name="interests" value="singing" onclick="counting()">Singing</td>
+								<td><input type="checkbox" name="interests" value="dancing" onclick="counting()">Dancing</td>
+							</tr>
+									<tr>
+										<td><button onclick="resetForm()">Reset</button></td>
+										<td><input type="submit" value="Submit Form" /></td>
+									</tr>
+			</table>
+</div>
+      <script>
+		 		function focussing(y)
+				{
+							console.log(y);
+							y.style.background="yellow";
+				};
+				function blurring(x){
+									console.log(x);
+									var z=document.getElementById('firstname').value;
+											if(x.getAttribute('id')==='firstname')
+											{
+												if(z==null||z=="")
+													{
+												document.getElementById("demo2").innerHTML="firstname must be filled out";
+													}
+											}
+											if(x.getAttribute('id')==='lastname')
+												{
+													var w=document.getElementById('lastname').value;
+														if(w==null||w=="")
+														{
+															document.getElementById("demo3").innerHTML="lastname must be filled out";
+														}
+												}
+											if(x.getAttribute('id')==='email-id')
+													{
+														var a=document.getElementById('email-id').value;
+															if(a==null||a=="")
+																{
+																	document.getElementById("demo4").innerHTML="email must be filled out";
+																}
+													}
+											if(x.getAttribute('id')==='confirm-email')
+														{
+															var email = document.getElementById("email-id").value;
+															var confemail = document.getElementById("confirm-email").value;
+															if(email != confemail) 
+																{
+																			document.getElementById("demo").innerHTML="!please enter correct email";
+																}
+														}
+ 
+		                                        x.style.background="white";    
+														if(x.getAttribute('id')==='password')
+														{	
+															var b=document.getElementById('password').value;
+																if(b==null||b=="")
+																{
+													document.getElementById("demo5").innerHTML="password must be filled";
+																}
+														}
+														if(x.getAttribute('id')==='confirm-password')
+														{	
+																var password = document.getElementById("password").value;
+														var confpassword = document.getElementById("confirm-password").value;
+																if(password!= confpassword) 
+																{
+																document.getElementById("demo1").innerHTML="!please enter correct password";
+																}
+														}
+		
+	                                };
+	            function changing(x) 
+			          {
+					 
+							var txt = document.getElementById(x.getAttribute('id')).value.length;
+					         if(txt>0) 
+							   {
+								document.getElementById(x.getAttribute('id')).nextSibling.innerHTML="";
+							   }
+				         };
+             function resetForm()
+		            {
+			document.getElementById("myForm").reset();
+		            };
+					function dropDown1()
+							{ 
+							if(document.getElementById('Course').value==='10'||document.getElementById('Course').value==='+2')
+							  {
+							document.getElementById('group').style.display="block";		
+							document.getElementById('graduate').style.display="none";
+							document.getElementById('state').style.display="none";
+							 document.getElementById('branch').style.display="none";
+							  document.getElementById('post-graduate').style.display="none";
+							   }
+							   else if(document.getElementById('Course').value==='graduate')
+							   {
+							  document.getElementById('graduate').style.display="block";
+						document.getElementById('group').style.display="none";	
+						document.getElementById('state').style.display="none";
+					   document.getElementById('branch').style.display="none";
+						 document.getElementById('post-graduate').style.display="none";
+							   }
+							   else if(document.getElementById('Course').value==='post-graduate'){
+							  document.getElementById('post-graduate').style.display="block";
+							 document.getElementById('group').style.display="none";	
+							document.getElementById('graduate').style.display="none";
+							document.getElementById('state').style.display="none";
+							 document.getElementById('branch').style.display="none";
+							   }
+							   
+					       };
+						   function dropDown2(){
+						   if(document.getElementById('group').value==='sb'){
+						   document.getElementById('state').style.display="block";
+						   document.getElementById('post-graduate').style.display="none";
+							 document.getElementById('group').style.display="none";	
+							document.getElementById('graduate').style.display="none";							
+							 document.getElementById('branch').style.display="none";
+						   }
+						   };
+						   function dropDown3(){
+						   if(document.getElementById('graduate').value==='be'){
+						   document.getElementById('branch').style.display="block";
+						   document.getElementById('post-graduate').style.display="none";
+						   document.getElementById('group').style.display="none";	
+							document.getElementById('graduate').style.display="none";
+							document.getElementById('state').style.display="none";							
+						   }
+						   };
+						   function counting(){
+						   var checkboxes = document.getElementsByName("interests");
+						   var names=[];
+                           for(var i=0;i<checkboxes.length;i++)
+                              {
+                                     if(checkboxes[i].checked===true)
+									 {
+									//names=checkboxes[i].value;
+									names.push(checkboxes[i].value)
+									
+									 }
+                               
+							   }
+                         console.log("ur interests are:"+ names);
+							};
+							                         
+		</script>
+</form>
+</body>
+</html>

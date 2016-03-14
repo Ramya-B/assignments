@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>js Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class=container>
+	<div style="margin:30px;">
+         Num1: <input type="text"  id="number1" placeholder="Enter num1">   
+         Num2:<input type="text" id="number2" placeholder="Enter num2">   =
+         Result: <input type="text" id="result">
+		 </div>
+      <div class="btn-group" style="margin:20px;">
+    <button type="button" class="btn btn-primary" onClick="add()">Add</button>
+    <button type="button" class="btn btn-primary" onClick="sub()">Sub</button>
+    <button type="button" class="btn btn-primary" onClick="mul()">Mul</button>
+	 <button type="button" class="btn btn-primary" onClick="div()">Div</button>
+  </div>
+  </div>
+<script>
+function add(){
+var n1= document.getElementById('number1').value;
+ 
+var n2= document.getElementById('number2').value;
+var n3= +n1 + +n2;
+console.log(n1);
+console.log(+n2);
+console.log(n3);
+if(isNaN(n1)||n1==""){
+alert("please enter fst number");
+}else if(isNaN(n2)||n2==""){
+alert("please enter second number");
+}
+else{
+document.getElementById("result").value=n3;
+}
+  };
+function sub(){
+var n1=document.getElementById('number1').value;
+var n2=document.getElementById('number2').value;
+var n3= +n1 - +n2;
+console.log(n3);
+ if(isNaN(n1)||n1==""){
+alert("please enter first number");
+}else if(isNaN(n2)||n2==""){
+alert("please enter second number");
+}
+else{
+document.getElementById("result").value=n3;
+}
+};
+function mul(){
+var n1=document.getElementById('number1').value;
+var n2=document.getElementById('number2').value;
+var n3= n1*n2;
+console.log(n3);
+if(isNaN(n1)||n1==""){
+alert("please enter first number");
+}else if(isNaN(n2)||n2==""){
+alert("please enter second number");
+}
+else{
+document.getElementById("result").value=n3;
+}
+};
+function div(){
+var n1=document.getElementById('number1').value;
+var n2=document.getElementById('number2').value;
+var n3= n1/n2;
+console.log(n3);
+ if(isNaN(n1)||n1==""){
+alert("please enter first number");
+}else if(isNaN(n2)||n2==""){
+alert("please enter second number");
+}
+else if(n2==0){
+alert("if denominater zero result is infinte")}
+else{
+document.getElementById("result").value=n3;}
+};
+</script>
+</body>
+</html>
